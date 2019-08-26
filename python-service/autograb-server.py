@@ -358,7 +358,11 @@ def parsePDFAndGROBIDExtract():
 		venue=" ".join(soup.findAll("monogr")[0].findAll(text=True)).replace("\n"," ").strip()
 	except:
 		venue="NULL"
-	return jsonify({"author":author_list,"venue":venue})
+	try:
+		title=" ".join(soup.findAll("title")[0])
+	except:
+		title="NULL"
+	return jsonify({"author":author_list,"venue":venue,"title":title})
 
 # The HTTP POST method is used to send user-generated data to the web server. For example, a POST method is used when a user comments on a forum or if they upload a profile picture.
 # curl -i -H "Content-type: application/json" -X POST -d "{}" http://localhost:5000/autograb/pdfdata

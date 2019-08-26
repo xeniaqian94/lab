@@ -1,3 +1,6 @@
+python-service/__pycache__/
+python-service/grobid-0.5.4/*
+python-service/0.5.4.zip
 .vscode
 .DS_STORE
 node_modules
@@ -11,3 +14,4 @@ service-account.json
 cypress/screenshots/*
 .cache
 .parcel
+

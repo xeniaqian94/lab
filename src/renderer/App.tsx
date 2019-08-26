@@ -285,16 +285,18 @@ class _App extends React.Component<connectedProps, typeof AppDefaults.state> {
           // console.log((this.rightPanel.current as any).forFun())
           //   this.props.setRightPanel(("graphContainer" as any))
           // this.props.setRightPanel(("listview" as any))
-          var random = Math.floor(Math.random() * (5 - 0));
-          console.log("random" + random)
+
+          //TODO: randomly switch view ... debug
+          var random = Math.floor(Math.random() * (7 - 0));
+          // console.log("random" + random)
           if (random == 3) {
             await this.props.setRightPanel(("graphContainer" as any))
-            await this.props.setRightPanel(("listview" as any))
-          } 
+            await this.props.setRightPanel((this.props.rightPanel as any))
+          }
         }
 
         await this.props.setRightPanel(("graphContainer" as any))
-        await this.props.setRightPanel(("listview" as any))
+        await this.props.setRightPanel((this.props.rightPanel as any))
 
       }
 
@@ -361,7 +363,7 @@ class _App extends React.Component<connectedProps, typeof AppDefaults.state> {
   rightPanel = React.createRef<HTMLDivElement>();
 
   renderRightPanel = (panelName: rightPanelName) => {
-    console.log("render right panel")
+    // console.log("render right panel")
     switch (panelName) {
       case "graphContainer":
         return <GraphContainer />;
