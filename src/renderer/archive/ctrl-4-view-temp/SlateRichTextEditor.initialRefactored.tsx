@@ -25,7 +25,7 @@ import styled from '@emotion/styled'
 
 export const Button = styled('span')`
   cursor: pointer;
-  color: ${props =>
+  color: ${(props:any) =>
     props.reversed
       ? props.active
         ? 'white'
