@@ -1,6 +1,7 @@
 
 ## New README
-`autograb-server.py` and variants with timestamp are scripts that we would use to start an aws service in EC2 instance as a localhost. I
+`autograb-server.py` and variants with timestamp are scripts to start an aws service in EC2 instance as a localhost. 
+
 It calls `util.py` which has an `inference()` function that calls the `reproducibility_classifier_train.py` for a pre-trained model.
 
 
